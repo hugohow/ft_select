@@ -15,7 +15,5 @@ int     ft_get_pos(int *y, int *x);
 int     get_window_size(int *rows, int *cols);
 char    *ft_strsub(char const *s, unsigned int start, size_t len);
 
-void    print_bold_green(int fd);
-void    print_normal(int fd);
 void    ft_putstr(char const *str);
 void    ft_putnbr(int nb);

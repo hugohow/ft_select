@@ -210,6 +210,9 @@ void select_element_list()
 void editorProcessKeypress() {
 	char *ap;
 	char *standstr;
+
+	(void)ap;
+	(void)standstr;
   int c = ft_read_key();
   switch (c) {
 	case 27:
@@ -253,6 +256,7 @@ int main(int argc, char **argv)
 	struct termios new_termios;
 
 	i = 1;
+	(void)(orig_termios);
 	if (argc < 2)
 		return (0);
     if (signal(SIGWINCH, sig_handler) == SIG_ERR)

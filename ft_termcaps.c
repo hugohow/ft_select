@@ -61,9 +61,7 @@ int clear_character(void)
 
 void print_cmd(char *cmd)
 {
-    print_bold_green(1);
     ft_putstr("$> ");
-    print_normal(1);
     ft_putstr(cmd);
 }
 
