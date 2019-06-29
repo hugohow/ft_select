@@ -6,11 +6,19 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 18:48:48 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 19:34:43 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
+
+void		ft_getttyfd(void)
+{
+	char	*tty;
+
+	tty = ttyname(0);
+	E.fd = open(tty, O_WRONLY);
+}
 
 int ft_term_init(void)
 {
@@ -38,5 +46,6 @@ int ft_term_init(void)
     (E.new_termios).c_cc[VMIN] = 1;
 	(E.new_termios).c_cc[VTIME] = 1;
   	tcsetattr(0, TCSAFLUSH, &(E.new_termios));
+	ft_getttyfd();
     return (0);
 }

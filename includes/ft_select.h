@@ -35,6 +35,7 @@
 typedef struct s_arg {
 	char *arg;
 	int selected;
+	int deleted;
 }				t_arg;
 
 
@@ -56,7 +57,8 @@ struct editorConfig {
 struct editorConfig E;
 
 
-void ft_term_init_global(int argc, char **argv);
+void ft_init_global(int argc, char **argv);
+void ft_free_global(void);
 
 int ft_term_init(void);
 void ft_term_exit(void);

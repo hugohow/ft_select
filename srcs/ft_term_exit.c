@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:11:20 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:31:03 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 19:33:06 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void ft_term_exit(void)
 {
     tcsetattr(0, TCSAFLUSH, &(E.orig_termios));
+	close(E.fd);
 }

@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:31:20 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 19:36:57 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 		ft_putendl_fd("Not a terminal.", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
-	ft_term_init_global(argc + 1, argv + 1);
+	ft_init_global(argc + 1, argv + 1);
 	ft_term_init();
 	while (42)
 	{
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 			break ;
 	}
 	ft_argv_print_final();
-	close(E.fd);
 	ft_term_exit();
+	ft_free_global();
 	return (0);
 }
