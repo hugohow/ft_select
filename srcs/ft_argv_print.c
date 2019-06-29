@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 22:17:15 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 22:27:15 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void ft_argv_print(void)
 {
 	int i;
+	int j;
 
 	int max_len;
 
@@ -28,6 +29,7 @@ void ft_argv_print(void)
 	}
 
 	E.nb_row = (E.argc - 2) / E.nb_col;
+	E.nb_row /= 2;
 	if (E.nb_row + 1> E.screenrows)
 	{
 		ft_dprintf(E.fd ,"\nResize it !\n");
@@ -46,6 +48,13 @@ void ft_argv_print(void)
 		if (i % E.nb_col == 0)
 		{
 			ft_dprintf(E.fd ,"\r\n");
+			j = 0;
+			while (j < E.nb_col)
+			{
+				ft_dprintf(E.fd ,"--------------------------------");
+				j++;
+			}
+			ft_dprintf(E.fd ,"\r\n");
 			E.line++;
 		}
 		if ((E.argv)[i]->selected == 1)
@@ -56,7 +65,7 @@ void ft_argv_print(void)
 		{
 			ft_putstr_fd("\e[4m", E.fd);
 		}
-		ft_dprintf(E.fd ,"%-*.*s\x1b[0m", max_len, max_len, (E.argv)[i]->arg);
+		ft_dprintf(E.fd ,"|%-*.*s|\x1b[0m", max_len, max_len, (E.argv)[i]->arg);
 		i++;
 	}
 	ft_dprintf(E.fd ,"\r\n");
