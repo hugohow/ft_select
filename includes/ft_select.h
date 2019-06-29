@@ -54,13 +54,17 @@ struct editorConfig E;
 
 
 
-int ft_term_init(struct termios *orig_termios, struct termios *new_termios);
+int ft_term_init(struct termios *orig_termios, struct termios *new_termios, int argc, char **argv);
 void ft_term_exit(struct termios *orig_termios);
 int    ft_term_read_key(void);
 int ft_term_get_pos(int *col, int *row);
 void ft_term_apply_key(void);
 int ft_term_get_window_size(int *rows, int *cols);
 
-void ft_argv_print(int argc, t_arg **list_t_arg);
 void ft_argv_clear(void);
+void ft_argv_delete(void);
+void ft_argv_print(int argc, t_arg **list_t_arg);
+void ft_argv_select(void);
+
+void ft_cursor_move(int key);
 #endif

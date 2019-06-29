@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 01:44:11 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 01:47:02 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void ft_argv_print(int argc, t_arg **list_t_arg)
 		{
 			ft_putstr_fd("\e[4m", 0);
 		}
-		ft_dprintf(0 ,"%-20s\x1b[0m", list_t_arg[i]->arg);
+		ft_dprintf(0 ,"%-20.15s\x1b[0m", list_t_arg[i]->arg);
 		i++;
 	}
 	ft_dprintf(0 ,"\r\n");
