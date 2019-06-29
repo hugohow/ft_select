@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:36:57 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 22:07:14 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,6 @@ static void sig_handler(int signo)
 	{
 		signal(SIGTSTP, sig_handler);
 		signal(SIGCONT, sig_handler);
-		int i;
-
-		i = 0;
-		while (i < E.line)
-		{
-			ft_dprintf(0 ,"\n");
-			i++;
-		}
 		ft_term_init();
 	}
 }
@@ -87,8 +79,8 @@ int main(int argc, char **argv)
 		if (ft_term_apply_key() == 0)
 			break ;
 	}
-	ft_argv_print_final();
 	ft_term_exit();
+	ft_argv_print_final();
 	ft_free_global();
 	return (0);
 }

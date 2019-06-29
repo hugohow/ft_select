@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:34:43 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 22:05:50 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ int ft_term_init(void)
 	tcgetattr(STDIN_FILENO, &(E.orig_termios));
 	E.new_termios = E.orig_termios;
     (E.new_termios).c_lflag &= ~(ICANON | ECHO);
-	(E.new_termios).c_lflag |= ISIG;
     (E.new_termios).c_cc[VMIN] = 1;
 	(E.new_termios).c_cc[VTIME] = 1;
-  	tcsetattr(0, TCSAFLUSH, &(E.new_termios));
+  	tcsetattr(0, TCSANOW, &(E.new_termios));
+	ft_dprintf(0 ,"\033[?1049h\033[H");
 	ft_getttyfd();
     return (0);
 }

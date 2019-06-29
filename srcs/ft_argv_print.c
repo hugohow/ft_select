@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:48:22 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 20:39:52 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,25 @@ void ft_argv_print(void)
 	else
 		E.nb_col = E.screencols/max_len;
 	if (E.nb_col == 0)
-		E.nb_col = 1;
+	{
+		ft_dprintf(E.fd ,"\nResize it !\n");
+		E.line = 1;
+		return ;
+	}
+
+	E.nb_row = (E.argc - 2) / E.nb_col;
+	if (E.nb_row + 10 > E.screenrows)
+	{
+		ft_dprintf(E.fd ,"\nResize it !\n");
+		E.line = 1;
+		return ;
+	}
+
 	E.nb_row = (E.argc - 1)/E.nb_col;
 	E.cy = E.index / E.nb_col;
 	E.cx = E.index % E.nb_col;
 	
-	
+	ft_dprintf(E.fd ,"\033[2J\x1b[H");
 	i = 0;
 	while (i < E.argc - 2)
 	{
