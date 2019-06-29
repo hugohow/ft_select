@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 20:39:52 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 22:17:15 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ void ft_argv_print(void)
 	int max_len;
 
 	max_len = 30;
-	if (E.argc > E.screencols/max_len)
-		E.nb_col = E.screencols/(max_len * 1.5);
-	else
-		E.nb_col = E.screencols/max_len;
+	E.nb_col = E.screencols/max_len;
 	if (E.nb_col == 0)
 	{
 		ft_dprintf(E.fd ,"\nResize it !\n");
@@ -31,7 +28,7 @@ void ft_argv_print(void)
 	}
 
 	E.nb_row = (E.argc - 2) / E.nb_col;
-	if (E.nb_row + 10 > E.screenrows)
+	if (E.nb_row + 1> E.screenrows)
 	{
 		ft_dprintf(E.fd ,"\nResize it !\n");
 		E.line = 1;
