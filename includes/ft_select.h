@@ -20,6 +20,7 @@
 #define CTRL_KEY(k) ((k) & 0x1f)
 #include <sys/ioctl.h>
 #include <signal.h>
+#include <fcntl.h>
 
 # define ARROW_LEFT 1000
 # define ARROW_RIGHT 1001
@@ -48,21 +49,24 @@ struct editorConfig {
   int 	screenrows;
   int 	screencols;
   struct termios orig_termios;
+  struct termios new_termios;
   int line;
+  int fd;
 };
 struct editorConfig E;
 
 
+void ft_term_init_global(int argc, char **argv);
 
-int ft_term_init(struct termios *orig_termios, struct termios *new_termios, int argc, char **argv);
-void ft_term_exit(struct termios *orig_termios);
+int ft_term_init(void);
+void ft_term_exit(void);
 int    ft_term_read_key(void);
-int ft_term_get_pos(int *col, int *row);
 int ft_term_apply_key(void);
-int ft_term_get_window_size(int *rows, int *cols);
+int ft_term_get_window_size(void);
 void ft_argv_delete(void);
-void ft_argv_print(int argc, t_arg **list_t_arg);
+void ft_argv_print(void);
 void ft_argv_select(void);
+void ft_argv_print_final(void);
 
 void ft_cursor_move(int key);
 #endif

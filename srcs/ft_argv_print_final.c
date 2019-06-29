@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_get_zero.c                                 :+:      :+:    :+:   */
+/*   ft_argv_print_final.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 15:39:10 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/10 20:29:33 by hhow-cho         ###   ########.fr       */
+/*   Created: 2019/06/29 18:59:58 by hhow-cho          #+#    #+#             */
+/*   Updated: 2019/06/29 19:00:09 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_select.h"
 
-int					ft_flag_get_zero(char *str)
+void ft_argv_print_final()
 {
-	unsigned int	i;
+	int i;
 
 	i = 0;
-	while (str[i])
+	while (i < E.line)
 	{
-		if (str[i] == '.')
-			break ;
-		if (ft_isdigit(str[i]))
+		ft_dprintf(0,"\033[K");
+		ft_dprintf(0,"\033[A");
+		i++;
+	}
+	i = 0;
+	ft_dprintf(0 ,"\033[K");
+	while (E.argv[i])
+	{
+		if (E.argv[i]->selected == 1)
 		{
-			if (str[i] == '0')
-				return (1);
-			break ;
+			ft_putstr_fd(E.argv[i]->arg, 1);
+			ft_putstr_fd(" ", 1);
 		}
 		i++;
 	}
-	return (0);
 }

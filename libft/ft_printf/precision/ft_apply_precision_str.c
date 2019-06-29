@@ -14,6 +14,9 @@
 
 char				*ft_apply_precision_str(char *str, t_flag *flag, int sign)
 {
+	unsigned int	str_len;
+
+	str_len = ft_strlen(str);
 	if (sign == 0 && flag->precision == 0)
 		return (ft_strcpy(str, ""));
 	if (flag->precision < 0)

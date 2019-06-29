@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:52:57 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 02:30:27 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 17:32:50 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int ft_term_apply_key(void)
 	(void)standstr;
   int c = ft_term_read_key();
   switch (c) {
-	case 27:
 	case 10:
-    case CTRL_KEY('z'):
       return (0);
       break;
 

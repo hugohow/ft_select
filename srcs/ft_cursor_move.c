@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:02:55 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 02:03:05 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 19:13:20 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void ft_cursor_move(int key)
 		{
 			E.cx++;
 			E.index = E.cy * E.nb_col + E.cx;
+		}
+		else
+		{
+			E.cx = 0;
+			E.cy = 0;
+			E.index = 0;
 		}
 	}
 	if (key == ARROW_UP)

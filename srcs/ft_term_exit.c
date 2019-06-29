@@ -6,14 +6,13 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:11:20 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 01:12:24 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 19:31:03 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
 
-void ft_term_exit(struct termios *orig_termios)
+void ft_term_exit(void)
 {
-    tcsetattr(0, TCSAFLUSH, orig_termios);
-	exit(0);
+    tcsetattr(0, TCSAFLUSH, &(E.orig_termios));
 }
