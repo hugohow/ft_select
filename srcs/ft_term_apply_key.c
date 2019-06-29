@@ -6,20 +6,14 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:52:57 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 02:02:50 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 02:30:27 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
 
-void exit_select()
-{
-	ft_dprintf(0 ,"\033[u");
-	ft_term_exit(&E.orig_termios);
-}
 
-
-void ft_term_apply_key(void) 
+int ft_term_apply_key(void) 
 {
 	char *ap;
 	char *standstr;
@@ -31,7 +25,7 @@ void ft_term_apply_key(void)
 	case 27:
 	case 10:
     case CTRL_KEY('z'):
-      exit_select();
+      return (0);
       break;
 
     case ARROW_UP:
@@ -48,4 +42,5 @@ void ft_term_apply_key(void)
 		ft_argv_select();
 		break;
 	}
+	return (1);
 }

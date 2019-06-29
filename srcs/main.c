@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 02:07:39 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 02:31:06 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,15 @@
 
 
 void editorRefreshScreen(int argc, t_arg **list_t_arg) {
-	ft_argv_clear();
+	int i;
+
+	i = 0;
+	while (i < E.line + 1)
+	{
+		ft_dprintf(0 ,"\033[K");
+		ft_dprintf(0 ,"\033[A");
+		i++;
+	}
 	E.line = 0;
 	ft_argv_print(argc, list_t_arg);
 }
@@ -50,7 +58,28 @@ int main(int argc, char **argv)
 	while (42)
 	{
 		editorRefreshScreen(E.argc, E.argv);
-		ft_term_apply_key();
+		if (ft_term_apply_key() == 0)
+			break ;
 	}
+
+	i = 0;
+	while (i < E.line + 1)
+	{
+		ft_dprintf(0 ,"\033[K");
+		ft_dprintf(0 ,"\033[A");
+		i++;
+	}
+	i = 0;
+	while (E.argv[i])
+	{
+		if (E.argv[i]->selected == 1)
+		{
+			ft_putstr_fd(E.argv[i]->arg, 1);
+			ft_putstr_fd(" ", 1);
+		}
+		i++;
+	}
+	ft_dprintf(0 ,"\033[u");
+	ft_term_exit(&E.orig_termios);
 	return (0);
 }

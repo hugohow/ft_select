@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 01:47:02 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 02:18:25 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void ft_argv_print(int argc, t_arg **list_t_arg)
 		E.nb_col = E.screencols/40;
 	else
 		E.nb_col = E.screencols/20;
+	if (E.nb_col == 0)
+		E.nb_col = 1;
 	E.nb_row = (argc - 1)/E.nb_col;
 	E.cy = E.index / E.nb_col;
 	E.cx = E.index % E.nb_col;
