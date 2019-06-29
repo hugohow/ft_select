@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 22:05:50 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/06/29 23:17:37 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void		ft_getttyfd(void)
 
 	tty = ttyname(0);
 	E.fd = open(tty, O_WRONLY);
+	ft_memdel((void **)&tty);
 }
 
 int ft_term_init(void)
@@ -31,12 +32,12 @@ int ft_term_init(void)
 		ret = tgetent(NULL, "xterm-256color");
     if (ret == -1)
     {
-        printf("Could not access to the termcap database..\n");
+        ft_dprintf(2, "Could not access to the termcap database..\n");
         return (-1);
     }
     else if (ret == 0)
     {
-        printf("Terminal type '%s' is not defined in termcap database (or have too few informations).\n", term_name);
+        ft_dprintf(2, "Terminal type '%s' is not defined in termcap database (or have too few informations).\n", term_name);
         return (-1);
     }
 	tcgetattr(STDIN_FILENO, &(E.orig_termios));
