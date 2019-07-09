@@ -6,7 +6,7 @@
 #    By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/05 23:41:00 by hhow-cho          #+#    #+#              #
-#    Updated: 2019/06/28 23:46:54 by hhow-cho         ###   ########.fr        #
+#    Updated: 2019/07/09 18:21:38 by hhow-cho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -155,9 +155,7 @@ SRCS	=	core/ft_memset.c					\
 		ft_printf/parser/ft_flag_get_width.c			\
 		ft_printf/parser/ft_flag_get_zero.c			\
 		ft_printf/precision/ft_apply_precision_nb.c	\
-		ft_printf/precision/ft_apply_precision_str.c	\
-		get_next_line/get_next_line.c
-
+		ft_printf/precision/ft_apply_precision_str.c	
 
 OBJS	=	$(SRCS:.c=.o)
 
