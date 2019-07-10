@@ -6,27 +6,37 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 18:48:42 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 21:26:04 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ft_select.h"
 
+t_vars *get_vars(void)
+{
+	static t_vars *p_vars;
+
+	if (p_vars == NULL)
+		p_vars = (t_vars *)ft_memalloc(sizeof(t_vars));
+	return (p_vars);
+}
 
 void editorRefreshScreen(void)
 {
 	int i;
+	t_vars *p_vars;
 
 	i = 0;
+	p_vars = get_vars();
 	ft_dprintf(0 ,"\033[?1049h\033[H");
-	while (i < E.line + 1)
+	while (i < p_vars->line + 1)
 	{
 		ft_dprintf(0 ,"\033[K");
 		ft_dprintf(0 ,"\033[A");
 		i++;
 	}
-	E.line = 0;
+	p_vars->line = 0;
 	ft_argv_print();
 }
 
@@ -62,7 +72,7 @@ int main(int argc, char **argv)
 	if (argc < 2)
 	{
 		ft_putendl_fd("usage: ./ft_select arg1 arg2 arg3 ...", 2);
-		exit (1);
+		exit (EXIT_FAILURE);
 	}
 	if (!isatty(STDERR_FILENO))
 	{

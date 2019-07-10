@@ -23,6 +23,7 @@ SRC =	srcs/ft_argv_delete.c	\
 		srcs/ft_argv_get_color.c		\
 		srcs/ft_argv_select.c			\
 		srcs/ft_cursor_move.c			\
+		srcs/ft_cursor_search.c			\
 		srcs/ft_global.c				\
 		srcs/ft_term_apply_key.c		\
 		srcs/ft_term_exit.c				\

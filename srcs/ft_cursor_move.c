@@ -6,57 +6,84 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:02:55 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:13:20 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 21:25:44 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
 
-void ft_cursor_move(int key)
+static void ft_cursor_move_left()
 {
 	int index;
+	t_vars *p_vars;
 
+	p_vars = get_vars();
+	index = p_vars->cy * p_vars->nb_col + (p_vars->cx - 1);
+	if (index >= 0)
+	{
+		p_vars->cx--;
+		p_vars->index = p_vars->cy * p_vars->nb_col + p_vars->cx;
+	}
+}
+
+static void ft_cursor_move_right()
+{
+	int index;
+	t_vars *p_vars;
+
+	p_vars = get_vars();
+	index = p_vars->cy * p_vars->nb_col + (p_vars->cx + 1);
+	if (index < p_vars->argc - 2)
+	{
+		p_vars->cx++;
+		p_vars->index = p_vars->cy * p_vars->nb_col + p_vars->cx;
+	}
+	else
+	{
+		p_vars->cx = 0;
+		p_vars->cy = 0;
+		p_vars->index = 0;
+	}
+}
+
+static void ft_cursor_move_up()
+{
+	int index;
+	t_vars *p_vars;
+
+	p_vars = get_vars();
+	index = (p_vars->cy - 1) * p_vars->nb_col + p_vars->cx;
+	if (index >= 0)
+	{
+		p_vars->cy--;
+		p_vars->index = p_vars->cy * p_vars->nb_col + p_vars->cx;
+	}
+}
+
+static void ft_cursor_move_down()
+{
+	int index;
+	t_vars *p_vars;
+
+	p_vars = get_vars();
+	index = (p_vars->cy + 1) * p_vars->nb_col + p_vars->cx;
+	if (index < p_vars->argc - 2)
+	{
+		p_vars->cy++;
+		p_vars->index = p_vars->cy * p_vars->nb_col + p_vars->cx;
+	}
+}
+
+
+
+void ft_cursor_move(int key)
+{
 	if (key == ARROW_LEFT)
-	{
-		index = E.cy * E.nb_col + (E.cx - 1);
-		if (index >= 0)
-		{
-			E.cx--;
-			E.index = E.cy * E.nb_col + E.cx;
-		}
-	}
+		ft_cursor_move_left();
 	if (key == ARROW_RIGHT)
-	{
-		index = E.cy * E.nb_col + (E.cx + 1);
-		if (index < E.argc - 2)
-		{
-			E.cx++;
-			E.index = E.cy * E.nb_col + E.cx;
-		}
-		else
-		{
-			E.cx = 0;
-			E.cy = 0;
-			E.index = 0;
-		}
-	}
+		ft_cursor_move_right();
 	if (key == ARROW_UP)
-	{
-		index = (E.cy - 1) * E.nb_col + E.cx;
-		if (index >= 0)
-		{
-			E.cy--;
-			E.index = E.cy * E.nb_col + E.cx;
-		}
-	}
+		ft_cursor_move_up();
 	if (key == ARROW_DOWN)
-	{
-		index = (E.cy + 1) * E.nb_col + E.cx;
-		if (index < E.argc - 2)
-		{
-			E.cy++;
-			E.index = E.cy * E.nb_col + E.cx;
-		}
-	}
-
+		ft_cursor_move_down();
 }

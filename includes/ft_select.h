@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 18:23:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 18:26:04 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 22:03:54 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@
 # define ANSI_COLOR_RESET "\x1b[0m"
 
 # define SELECTED_COLOR "\x1b[7m"
-# define SELECTION_COLOR "\x1b[41m"
+# define SELECTION_COLOR "\x1b[4m"
 
 typedef struct		s_color
 {
@@ -88,7 +88,8 @@ typedef struct s_arg {
 }				t_arg;
 
 
-struct editorConfig {
+typedef struct 	s_vars
+{
   int cx;
   int cy;
   int index;
@@ -102,9 +103,7 @@ struct editorConfig {
   struct termios new_termios;
   int line;
   int fd;
-};
-struct editorConfig E;
-
+}			t_vars;
 
 void ft_init_global(int argc, char **argv);
 void ft_free_global(void);
@@ -120,10 +119,11 @@ void ft_argv_select(void);
 void ft_argv_print_final(void);
 
 void ft_cursor_move(int key);
-
+void ft_cursor_search(int key);
 void		signal_handler(int signal);
 void editorRefreshScreen(void);
 char *ft_argv_get_color(struct stat file_stat, char *buff);
 int					ft_printf(const char *format, ...);
 int					ft_dprintf(int fd, const char *format, ...);
+t_vars *get_vars(void);
 #endif

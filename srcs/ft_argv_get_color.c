@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 18:22:36 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 18:30:13 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 21:36:09 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,15 +88,22 @@ char *ft_argv_get_color(struct stat file_stat, char *buff)
 	int		i;
 	char	fg[10];
 
-	colors = getenv("LSCOLORS");
+	colors = ft_strdup(getenv("LSCOLORS"));
 	if (colors == NULL)
-		return (buff);
+		colors = ft_strdup("Gxfxcxdxbxegedabagacad");
 	i = get_index(file_stat);
 	if (ft_strlen(colors) < 22)
+	{
+		ft_memdel((void **)&colors);
 		return (buff);
+	}
 	if (i == -1)
+	{
+		ft_memdel((void **)&colors);
 		return (buff);
+	}
 	get_fg(colors[i], fg);
 	ft_strcat(buff, fg);
+	ft_memdel((void **)&colors);
 	return (buff);
 }

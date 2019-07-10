@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:01:44 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 02:01:51 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 21:25:35 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void ft_argv_select()
 {
-	E.argv[E.index]->selected = E.argv[E.index]->selected ? 0 : 1;
+	t_vars *p_vars;
+
+	p_vars = get_vars();
+	p_vars->argv[p_vars->index]->selected = p_vars->argv[p_vars->index]->selected ? 0 : 1;
 	ft_cursor_move(ARROW_RIGHT);
 }

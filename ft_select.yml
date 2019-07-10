@@ -1,0 +1,255 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/hugohow-choong/42/ft_select
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 198
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 42
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 496
+    content: "Restored session: Wed Jul 10 22:02:02 CEST 2019\r\n"
+  - delay: 854
+    content: "bash: /Users/hugohow-choong/.bash_profile: line 133: syntax error: unexpected end of file\r\n"
+  - delay: 290
+    content: "\e]7;file://MBP-de-Hugo/Users/hugohow-choong/42/ft_select\a"
+  - delay: 6
+    content: "\r\r\n \e[36;1m2019-07-10 22:02:15 \e[0;31m⌚ \e[0;33m |2.5.3| \e[0;35mMBP-de-Hugo \e[39min \e[0;32m~/42/ft_select\r\r\n\e[36;1m± \e[0;32m|master U:15 ?:5 \e[0;31m✗\e[0;32m| \e[0;32m→\e[39m "
+  - delay: 1792
+    content: .
+  - delay: 192
+    content: /
+  - delay: 306
+    content: f
+  - delay: 217
+    content: t
+  - delay: 139
+    content: "\a_select"
+  - delay: 611
+    content: ' '
+  - delay: 540
+    content: /
+  - delay: 268
+    content: s
+  - delay: 390
+    content: b
+  - delay: 111
+    content: i
+  - delay: 138
+    content: 'n'
+  - delay: 765
+    content: /
+  - delay: 544
+    content: '*'
+  - delay: 459
+    content: "\r\n"
+  - delay: 8
+    content: "\e[?1049h\e[H\e[?1049h\e[H\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[4m\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[35m/sbin/fsck_msdos              \e[0m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 1238
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[4m\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[35m/sbin/fsck_msdos              \e[0m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 166
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[4m\e[35m/sbin/fsck_msdos              \e[0m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 359
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[4m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 256
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[4m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 316
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[4m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 197
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[4m\e[33m/sbin/mount                   \e[0m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 362
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[47m\e[33m/sbin/mount                   \e[0m\e[4m\e[35m/sbin/mount_acfs              \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\r\r\n\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\r\r\n\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\r\r\n\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\r\r\n\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\r\r\n\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\r\r\n\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 1062
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mknod                   \e[0m\e[47m\e[4m\e[33m/sbin/mount                   \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\r\r\n\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\r\r\n\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\r\r\n\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\r\r\n\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\r\r\n\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 213
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[4m\e[33m/sbin/mknod                   \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\r\r\n\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\r\r\n\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\r\r\n\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\r\r\n\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\r\r\n\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 206
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[4m\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\r\r\n\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\r\r\n\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\r\r\n\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\r\r\n\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\r\r\n\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 733
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[4m\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\r\r\n\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\r\r\n\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\r\r\n\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\r\r\n\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\r\r\n\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 292
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[4m\e[35m/sbin/fsck_msdos              \e[0m\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\r\r\n\e[33m/sbin/fstyp_udf               \e[0m\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\r\r\n\e[33m/sbin/md5                     \e[0m\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\r\r\n\e[35m/sbin/mount_exfat             \e[0m\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\r\r\n\e[35m/sbin/mount_ntfs              \e[0m\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\r\r\n\e[35m/sbin/newfs_exfat             \e[0m\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\r\r\n\e[33m/sbin/nologin                 \e[0m\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\r\r\n\e[33m/sbin/route                   \e[0m\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 339
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[35m/sbin/apfs_hfs_convert        \e[0m\e[33m/sbin/autodiskmount           \e[0m\e[33m/sbin/disklabel               \e[0m\e[33m/sbin/dmesg                   \e[0m\e[33m/sbin/dynamic_pager           \e[0m\e[33m/sbin/emond                   \e[0m\r\r\n\e[33m/sbin/fibreconfig             \e[0m\e[33m/sbin/fsck                    \e[0m\e[35m/sbin/fsck_apfs               \e[0m\e[33m/sbin/fsck_cs                 \e[0m\e[35m/sbin/fsck_exfat              \e[0m\e[4m\e[35m/sbin/fsck_hfs                \e[0m\r\r\n\e[47m\e[35m/sbin/fsck_udf                \e[0m\e[33m/sbin/fstyp                   \e[0m\e[33m/sbin/fstyp_hfs               \e[0m\e[33m/sbin/fstyp_msdos             \e[0m\e[33m/sbin/fstyp_ntfs              \e[0m\e[33m/sbin/fstyp_udf               \e[0m\r\r\n\e[33m/sbin/halt                    \e[0m\e[33m/sbin/ifconfig                \e[0m\e[33m/sbin/kextload                \e[0m\e[33m/sbin/kextunload              \e[0m\e[33m/sbin/launchd                 \e[0m\e[33m/sbin/md5                     \e[0m\r\r\n\e[33m/sbin/mount_afp               \e[0m\e[35m/sbin/mount_apfs              \e[0m\e[35m/sbin/mount_cd9660            \e[0m\e[35m/sbin/mount_cddafs            \e[0m\e[33m/sbin/mount_devfs             \e[0m\e[35m/sbin/mount_exfat             \e[0m\r\r\n\e[33m/sbin/mount_fdesc             \e[0m\e[35m/sbin/mount_ftp               \e[0m\e[35m/sbin/mount_hfs               \e[0m\e[35m/sbin/mount_msdos             \e[0m\e[33m/sbin/mount_nfs               \e[0m\e[35m/sbin/mount_ntfs              \e[0m\r\r\n\e[33m/sbin/mount_smbfs             \e[0m\e[35m/sbin/mount_udf               \e[0m\e[33m/sbin/mount_webdav            \e[0m\e[33m/sbin/mpioutil                \e[0m\e[35m/sbin/newfs_apfs              \e[0m\e[35m/sbin/newfs_exfat             \e[0m\r\r\n\e[35m/sbin/newfs_hfs               \e[0m\e[35m/sbin/newfs_msdos             \e[0m\e[35m/sbin/newfs_udf               \e[0m\e[33m/sbin/nfsd                    \e[0m\e[33m/sbin/nfsiod                  \e[0m\e[33m/sbin/nologin                 \e[0m\r\r\n\e[33m/sbin/pfctl                   \e[0m\e[33m/sbin/ping                    \e[0m\e[33m/sbin/ping6                   \e[0m\e[33m/sbin/quotacheck              \e[0m\e[33m/sbin/reboot                  \e[0m\e[33m/sbin/route                   \e[0m\r\r\n\e[33m/sbin/rtsol                   \e[0m\e[33m/sbin/shutdown                \e[0m\e[33m/sbin/umount                  \e[0m\r\r\n"
+  - delay: 909
+    content: "\e[?1049l/sbin/fsck_udf "
+  - delay: 302
+    content: "\e]7;file://MBP-de-Hugo/Users/hugohow-choong/42/ft_select\a"
+  - delay: 7
+    content: "\r\r\n \e[36;1m2019-07-10 22:02:28 \e[0;31m⌚ \e[0;33m |2.5.3| \e[0;35mMBP-de-Hugo \e[39min \e[0;32m~/42/ft_select\r\r\n\e[36;1m± \e[0;32m|master U:15 ?:5 \e[0;31m✗\e[0;32m| \e[0;32m→\e[39m "
+  - delay: 2259
+    content: .
+  - delay: 155
+    content: /
+  - delay: 491
+    content: f
+  - delay: 95
+    content: "\at_select"
+  - delay: 461
+    content: ' '
+  - delay: 1329
+    content: '*'
+  - delay: 821
+    content: "\r\n"
+  - delay: 7
+    content: "\e[?1049h\e[H\e[?1049h\e[H\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\n\e[4mMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0mdemo.yml                      \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1026
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0m\e[4mREADME.md                     \e[0mauthor                        \e[0mdemo.yml                      \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 611
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0m\e[4mauthor                        \e[0mdemo.yml                      \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 707
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[4mdemo.yml                      \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 515
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[47mdemo.yml                      \e[0m\e[4m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1058
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[47m\e[4mdemo.yml                      \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0m\r\r\nft_select.yml                 \e[0m\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 316
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0m\e[4mauthor                        \e[0m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 258
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[4m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 279
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[47m\e[33mft_select                     \e[0m\e[4m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1681
+    content: "\e[?1049l^Z\r\n[1]+  Stopped                 ./ft_select *\r\n"
+  - delay: 327
+    content: "\e]7;file://MBP-de-Hugo/Users/hugohow-choong/42/ft_select\a"
+  - delay: 7
+    content: "\r\r\n \e[36;1m2019-07-10 22:02:41 \e[0;31m⌚ \e[0;33m |2.5.3| \e[0;35mMBP-de-Hugo \e[39min \e[0;32m~/42/ft_select\r\r\n\e[36;1m± \e[0;32m|master U:15 ?:5 \e[0;31m✗\e[0;32m| \e[0;32m→\e[39m "
+  - delay: 1692
+    content: f
+  - delay: 173
+    content: g
+  - delay: 171
+    content: ' '
+  - delay: 231
+    content: '"%./ft_select" '
+  - delay: 463
+    content: "\r\n./ft_select *\r\n\e[?1049h\e[H\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[47m\e[33mft_select                     \e[0m\e[4m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1154
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0mauthor                        \e[0m\e[47m\e[4m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 278
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0m\e[4mauthor                        \e[0m\e[47m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1258
+    content: "\e[?1049h\e[H\e[K\e[A\e[K\e[A\e[K\e[A\e[2J\e[H\rFT_SELECT \U0001F447\r\n\r\r\nMakefile                      \e[0mREADME.md                     \e[0m\e[47mauthor                        \e[0m\e[47m\e[4m\e[33mft_select                     \e[0m\e[96mft_select.dSYM                \e[0mft_select.yml                 \e[0m\r\r\n\e[96mincludes                      \e[0m\e[96mlibft                         \e[0mselect.yml                    \e[0m\e[96msrcs                          \e[0m\r\r\n"
+  - delay: 1138
+    content: "\e[?1049lauthor ft_select "
+  - delay: 299
+    content: "\e]7;file://MBP-de-Hugo/Users/hugohow-choong/42/ft_select\a"
+  - delay: 6
+    content: "\r\r\n \e[36;1m2019-07-10 22:02:47 \e[0;31m⌚ \e[0;33m |2.5.3| \e[0;35mMBP-de-Hugo \e[39min \e[0;32m~/42/ft_select\r\r\n\e[36;1m± \e[0;32m|master U:15 ?:5 \e[0;31m✗\e[0;32m| \e[0;32m→\e[39m "
+  - delay: 1275
+    content: e
+  - delay: 253
+    content: x
+  - delay: 193
+    content: i
+  - delay: 175
+    content: t
+  - delay: 197
+    content: "\r\nlogout\r\nSaving session..."
+  - delay: 9
+    content: "completed.\r\n"
