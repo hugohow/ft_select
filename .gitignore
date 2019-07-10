@@ -1,0 +1,29 @@
+
+# Mac Os
+.DS_Store
+.Spotlight-V100
+.Trashes
+ft_select
+
+# Visual Studio code
+*.vscode/
+
+# C extensions
+#  Object files
+*.o
+#  Shared object
+*.so
+
+# Libraries
+*.a
+
+# Exe
+*.exe
+*.app
+
+# Debug files
+*.dSYM
+*.swp
+
+# For testing
+leaks.txt

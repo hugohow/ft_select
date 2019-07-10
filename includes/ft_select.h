@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_select.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/09 18:23:48 by hhow-cho          #+#    #+#             */
+/*   Updated: 2019/07/09 18:23:49 by hhow-cho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 # ifndef FT_SELECT_H
 # define FT_SELECT_H
 #include "libft.h"
@@ -10,14 +23,6 @@
 #include <sys/uio.h>
 #include <unistd.h>
 #include <stdlib.h>
-
-
-#define BAUDRATE B38400
-#define MODEMDEVICE "/dev/ttyS1"
-#define _POSIX_SOURCE 1 /* code source conforme à POSIX */
-#define FALSE 0
-#define TRUE 1
-#define CTRL_KEY(k) ((k) & 0x1f)
 #include <sys/ioctl.h>
 #include <signal.h>
 #include <fcntl.h>
