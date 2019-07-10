@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 19:01:49 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 19:58:09 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:16:05 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void ft_init_global(int argc, char **argv)
 		(E.argv)[i] = (t_arg *)ft_memalloc(sizeof(t_arg));
 		((E.argv)[i])->arg = argv[i];
 		((E.argv)[i])->selected = 0;
-		((E.argv)[i])->deleted = 0;
 		i++;
 	}
 	E.cx = 0;

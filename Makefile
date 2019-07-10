@@ -1,6 +1,11 @@
 NAME 		=		ft_select
 CC			= 		gcc
 CFLAGS 		= 		-Wall -Werror -Wextra -g -g3 -Iincludes
+ifeq ($(shell uname),Darwin)
+TERMFLAG 	= 		-ltermcap
+else
+TERMFLAG 	= 		-lcurses
+endif
 OBJ 		= 		$(SRC:.c=.o)
 
 C_OK		=		"\033[35m"
@@ -36,7 +41,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@make -C libft/
 	@echo "Creating" [ $(NAME) ]
-	@$(CC) $(CFLAGS) -ltermcap $(INCLUDES) $^ libft/libft.a -o $(NAME)
+	@$(CC) $(CFLAGS) $(INCLUDES) $^ libft/libft.a -o $(NAME) $(TERMFLAG)
 	@echo "Creation" [ $(NAME) ] $(SUCCESS)
 
 clean:

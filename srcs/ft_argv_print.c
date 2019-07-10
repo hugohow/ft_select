@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 22:38:15 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:16:52 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void ft_argv_print(void)
 	}
 
 	E.nb_row = (E.argc - 2) / E.nb_col;
-	if (E.nb_row + 1> E.screenrows)
+	if (E.nb_row + 1 > E.screenrows)
 	{
 		ft_dprintf(E.fd ,"\nResize it !\n");
 		E.line = 1;
@@ -50,11 +50,11 @@ void ft_argv_print(void)
 		}
 		if ((E.argv)[i]->selected == 1)
 		{
-			ft_putstr_fd("\x1b[7m", E.fd);
+			ft_putstr_fd(SELECTED_COLOR, E.fd);
 		}
 		if (i == E.index)
 		{
-			ft_putstr_fd("\e[4,1m", E.fd);
+			ft_putstr_fd(SELECTION_COLOR, E.fd);
 		}
 		ft_dprintf(E.fd ,"%-*.*s\x1b[0m", max_len, max_len, (E.argv)[i]->arg);
 		i++;

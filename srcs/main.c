@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/29 22:07:14 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:43:32 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,20 +52,17 @@ static void sig_handler(int signo)
 
 int main(int argc, char **argv)
 {
-	int i;
-
-	i = 1;
 	if (argc < 2)
 	{
 		ft_putendl_fd("usage: ./ft_select arg1 arg2 arg3 ...", 2);
 		exit (1);
 	}
     if (signal(SIGWINCH, sig_handler) == SIG_ERR)
-        ft_dprintf(2 ,"\ncan't catch SIGWINCH\n");
+		ft_dprintf(2 ,"\ncan't catch SIGWINCH\n");
     if (signal(SIGCONT, sig_handler) == SIG_ERR)
-        ft_dprintf(2 ,"\ncan't catch SIGCONT\n");
+		ft_dprintf(2 ,"\ncan't catch SIGCONT\n");
     if (signal(SIGTSTP, sig_handler) == SIG_ERR)
-        ft_dprintf(2 ,"\ncan't catch SIGTSTP\n");
+		ft_dprintf(2 ,"\ncan't catch SIGTSTP\n");
 	if (!isatty(STDERR_FILENO))
 	{
 		ft_putendl_fd("Not a terminal.", STDERR_FILENO);

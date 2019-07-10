@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 18:23:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/09 18:23:49 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:16:08 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,12 @@
 #define CTRL_H ('h' & 0x1f)
 #define CTRL_N ('n' & 0x1f)
 
+# define SELECTED_COLOR "\x1b[7m"
+# define SELECTION_COLOR "\x1b[41m"
+
 typedef struct s_arg {
 	char *arg;
 	int selected;
-	int deleted;
 }				t_arg;
 
 
