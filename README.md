@@ -1,5 +1,10 @@
 ## ft_select
 
+Autocomplete part for https://github.com/hugohow/42sh
+
+Based on termcaps lib.
+
+<img src="render1562789124331.gif" alt="Gif" />
 
 
 ### No memory leaks. (Valgrind certified)
