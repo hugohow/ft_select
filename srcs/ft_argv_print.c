@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:18:48 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 14:16:52 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/10 18:27:20 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void ft_argv_print(void)
 		{
 			ft_putstr_fd(SELECTION_COLOR, E.fd);
 		}
+		ft_putstr_fd((E.argv)[i]->colors, E.fd);
 		ft_dprintf(E.fd ,"%-*.*s\x1b[0m", max_len, max_len, (E.argv)[i]->arg);
 		i++;
 	}
