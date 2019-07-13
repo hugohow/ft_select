@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/13 20:07:10 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:29:32 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/13 20:31:18 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@
 # define ANSI_COLOR_BG_BOLD_CYAN "\x1b[106m"
 # define ANSI_COLOR_BG_BOLD_GREY "\x1b[107m"
 # define ANSI_COLOR_RESET "\x1b[0m"
-# define SELECTED_COLOR "\x1b[47m"
+# define SELECTED_COLOR "\x1b[7m"
 # define SELECTION_COLOR "\x1b[4m"
 
 void	ft_init_global(int argc, char **argv);
