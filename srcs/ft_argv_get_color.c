@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 18:22:36 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 21:36:09 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/13 20:18:54 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,7 @@ static char				*get_fg(char color, char *fg)
 	return (fg);
 }
 
-
-char *ft_argv_get_color(struct stat file_stat, char *buff)
+char					*ft_argv_get_color(struct stat file_stat, char *buff)
 {
 	char	*colors;
 	int		i;

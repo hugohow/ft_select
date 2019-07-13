@@ -6,16 +6,16 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:02:55 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/10 21:25:44 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/13 20:27:18 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
 
-static void ft_cursor_move_left()
+static void	ft_cursor_move_left(void)
 {
-	int index;
-	t_vars *p_vars;
+	int		index;
+	t_vars	*p_vars;
 
 	p_vars = get_vars();
 	index = p_vars->cy * p_vars->nb_col + (p_vars->cx - 1);
@@ -26,10 +26,10 @@ static void ft_cursor_move_left()
 	}
 }
 
-static void ft_cursor_move_right()
+static void	ft_cursor_move_right(void)
 {
-	int index;
-	t_vars *p_vars;
+	int		index;
+	t_vars	*p_vars;
 
 	p_vars = get_vars();
 	index = p_vars->cy * p_vars->nb_col + (p_vars->cx + 1);
@@ -46,10 +46,10 @@ static void ft_cursor_move_right()
 	}
 }
 
-static void ft_cursor_move_up()
+static void	ft_cursor_move_up(void)
 {
-	int index;
-	t_vars *p_vars;
+	int		index;
+	t_vars	*p_vars;
 
 	p_vars = get_vars();
 	index = (p_vars->cy - 1) * p_vars->nb_col + p_vars->cx;
@@ -60,10 +60,10 @@ static void ft_cursor_move_up()
 	}
 }
 
-static void ft_cursor_move_down()
+static void	ft_cursor_move_down(void)
 {
-	int index;
-	t_vars *p_vars;
+	int		index;
+	t_vars	*p_vars;
 
 	p_vars = get_vars();
 	index = (p_vars->cy + 1) * p_vars->nb_col + p_vars->cx;
@@ -74,9 +74,7 @@ static void ft_cursor_move_down()
 	}
 }
 
-
-
-void ft_cursor_move(int key)
+void		ft_cursor_move(int key)
 {
 	if (key == ARROW_LEFT)
 		ft_cursor_move_left();

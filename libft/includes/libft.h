@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 16:11:35 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/06/27 17:39:52 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/13 20:24:34 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-int				ft_str_brackets_is_valid(const char *str, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -67,7 +66,6 @@ int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *str1, char const *str2);
 char			*ft_strtrim(char const *str);
-char			*ft_strtrim_free(char *str);
 char			**ft_strsplit(char const *str, char c);
 char			*ft_itoa(int nb);
 char			*ft_ulltoa(unsigned long long nb);
