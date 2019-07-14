@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:02:55 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:27:18 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 19:22:24 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ static void	ft_cursor_move_down(void)
 
 void		ft_cursor_move(int key)
 {
-	if (key == ARROW_LEFT)
+	if (key == LEFT_KEY)
 		ft_cursor_move_left();
-	if (key == ARROW_RIGHT)
+	if (key == RIGHT_KEY)
 		ft_cursor_move_right();
-	if (key == ARROW_UP)
+	if (key == UP_KEY)
 		ft_cursor_move_up();
-	if (key == ARROW_DOWN)
+	if (key == DOWN_KEY)
 		ft_cursor_move_down();
 }

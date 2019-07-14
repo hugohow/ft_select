@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:02:11 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:03:10 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 19:23:37 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	ft_argv_delete(void)
 		ft_free_global();
 		exit(0);
 	}
-	ft_cursor_move(ARROW_LEFT);
+	ft_cursor_move(LEFT_KEY);
 }

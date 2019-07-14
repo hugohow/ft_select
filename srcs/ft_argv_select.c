@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 02:01:44 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:01:47 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 19:23:34 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_argv_select(void)
 	p_vars = get_vars();
 	p_vars->argv[p_vars->index]->selected = \
 		p_vars->argv[p_vars->index]->selected ? 0 : 1;
-	ft_cursor_move(ARROW_RIGHT);
+	ft_cursor_move(RIGHT_KEY);
 }

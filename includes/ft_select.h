@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/13 20:07:10 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:31:18 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 19:27:44 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,20 @@
 # include <sys/stat.h>
 # include "libft.h"
 # include "ft_select_struc.h"
-# define ARROW_LEFT 1000
-# define ARROW_RIGHT 1001
-# define ARROW_UP 1002
-# define ARROW_DOWN 1003
-# define CTRL_L ('l' & 0x1f)
-# define CTRL_K ('k' & 0x1f)
-# define CTRL_H ('h' & 0x1f)
-# define CTRL_N ('n' & 0x1f)
-# define CTRL_Z ('z' & 0x1f)
+
+# define ENTER_KEY				10
+# define ESC_KEY				27
+# define SPC_KEY				32
+# define STAR_KEY				42
+# define MINUS_KEY				45
+# define O_KEY					111
+# define B_KEY					98
+# define BSP_KEY				127
+# define LEFT_KEY				4479771
+# define UP_KEY					4283163
+# define RIGHT_KEY				4414235
+# define DOWN_KEY				4348699
+# define DEL_KEY				2117294875L
 # define ANSI_COLOR_FG_BLACK "\x1b[30m"
 # define ANSI_COLOR_FG_RED "\x1b[31m"
 # define ANSI_COLOR_FG_GREEN "\x1b[32m"
@@ -90,4 +95,6 @@ char	*ft_argv_get_color(struct stat file_stat, char *buff);
 int		ft_printf(const char *format, ...);
 int		ft_dprintf(int fd, const char *format, ...);
 t_vars	*get_vars(void);
+void	signals_disable(void);
+void	signals_enable(void);
 #endif

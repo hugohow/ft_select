@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:21:46 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 16:01:24 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void			ft_refresh_screen(void)
 	ft_argv_print();
 }
 
-static void		signals_enable(void)
+void		signals_enable(void)
 {
 	signal(SIGINT, signal_handler);
 	signal(SIGABRT, signal_handler);
@@ -51,7 +51,7 @@ static void		signals_enable(void)
 	signal(SIGCONT, signal_handler);
 }
 
-static void		signals_disable(void)
+void		signals_disable(void)
 {
 	signal(SIGINT, SIG_IGN);
 	signal(SIGABRT, SIG_IGN);
