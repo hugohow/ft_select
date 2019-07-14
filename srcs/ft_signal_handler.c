@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:30:35 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 20:20:38 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/14 21:38:49 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,7 @@ static void	sigcont_handler(void)
 	if (ft_term_get_window_size() == -1)
 		return ;
 	ft_refresh_screen();
-	signal(SIGINT, signal_handler);
-	signal(SIGWINCH, signal_handler);
-	signal(SIGTSTP, signal_handler);
-	signal(SIGCONT, signal_handler);
+	signals_enable();
 }
 
 void		signal_handler(int signal)
