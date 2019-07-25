@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/13 19:56:10 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/25 13:21:11 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ int			ft_term_init(void)
 		ret = tgetent(NULL, term_name);
 	else
 		ret = tgetent(NULL, "xterm-256color");
+	if (!isatty(STDIN_FILENO))
+	{
+		ft_putendl_fd("Not a terminal.", STDERR_FILENO);
+		return (-1);
+	}
 	if (ret == -1)
 	{
 		ft_dprintf(2, "Could not access to the termcap database..\n");
