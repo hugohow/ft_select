@@ -1,6 +1,6 @@
 NAME 		=		ft_select
 CC			= 		gcc
-CFLAGS 		= 		-Wall -Werror -Wextra -g -g3 -Iincludes
+CFLAGS 		= 		-Wall -Werror -Wextra -Iincludes
 ifeq ($(shell uname),Darwin)
 TERMFLAG 	= 		-ltermcap
 else
@@ -60,7 +60,4 @@ fclean: clean
 	
 re: fclean all
 
-test: re
-	./$(NAME) 123456789 23456789 3456789 456789 56789 6789 789 89 9
-
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re

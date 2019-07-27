@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:30:35 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/25 13:22:15 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 19:07:45 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,23 @@ static void	sigwinch_handler(void)
 
 static void	sigtstp_handler(void)
 {
+	// int i;
+
 	ft_term_exit();
 	signal(SIGTSTP, SIG_DFL);
-	ioctl(STDERR_FILENO, TIOCSTI, "\x1A");
+	if ((ioctl(STDERR_FILENO, TIOCSTI, "\x1A")) < 0)
+	{
+		ft_free_global();
+		signals_disable();
+		exit(1);
+	}
+	// i = 0;
+	// while (i < 32)
+	// {
+	// 	if (i != SIGCONT)
+	// 		signal(i, SIG_IGN);
+	// 	i++;
+	// }
 }
 
 static void	sigcont_handler(void)
@@ -41,6 +55,7 @@ static void	sigcont_handler(void)
 		signals_disable();
 		exit(1);
 	}
+	signals_enable();
 	ft_refresh_screen();
 }
 

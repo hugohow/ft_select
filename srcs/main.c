@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:48:33 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/27 11:47:59 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 19:02:04 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void			ft_refresh_screen(void)
 
 	i = 0;
 	p_vars = get_vars();
-	ft_dprintf(0, "\033[?1049h\033[H");
 	while (i < p_vars->line + 1)
 	{
 		ft_dprintf(0, "\033[K");
@@ -50,7 +49,7 @@ int				main(int argc, char **argv)
 	if ((ft_term_init()) < 0)
 	{
 		ft_free_global();
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	signals_enable();
 	while (42)
