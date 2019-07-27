@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/27 12:03:27 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 12:48:57 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int			ft_term_init(void)
 		return (-1);
 	ft_init_termios();
 	ft_dprintf(0, "\033[?1049h\033[H");
+	ft_dprintf(0, "\e[?25l");
 	ft_getttyfd();
 	return (0);
 }

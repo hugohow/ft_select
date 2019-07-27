@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 01:11:20 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/14 16:03:20 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 12:49:49 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_term_exit(void)
 
 	p_vars = get_vars();
 	ft_dprintf(0, "\033[?1049l");
+	ft_dprintf(0, "\e[?25h");
 	tcsetattr(0, TCSANOW, &(p_vars->orig_termios));
 	close(p_vars->fd);
 }
