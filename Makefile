@@ -31,6 +31,7 @@ SRC =	srcs/ft_argv_delete.c	\
 		srcs/ft_term_init.c				\
 		srcs/ft_term_read_key.c			\
 		srcs/ft_signal_handler.c		\
+		srcs/ft_signals.c		\
 		srcs/main.c						
 
 all: $(NAME)

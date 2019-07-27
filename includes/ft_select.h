@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/13 20:07:10 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/14 19:27:44 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 11:53:56 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 # define RIGHT_KEY				4414235
 # define DOWN_KEY				4348699
 # define DEL_KEY				2117294875L
-# define ANSI_COLOR_FG_BLACK "\x1b[30m"
+# define ANSI_COLOR_FG_BLACK "\x1b[37m"
 # define ANSI_COLOR_FG_RED "\x1b[31m"
 # define ANSI_COLOR_FG_GREEN "\x1b[32m"
 # define ANSI_COLOR_FG_BROWN "\x1b[33m"

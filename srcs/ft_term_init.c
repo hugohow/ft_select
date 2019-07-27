@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/25 13:21:11 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 12:03:27 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	ft_init_termios(void)
 	tcsetattr(0, TCSANOW, &(p_vars->new_termios));
 }
 
-int			ft_term_init(void)
+static int	handle_error(void)
 {
 	char	*term_name;
 	int		ret;
@@ -49,7 +49,7 @@ int			ft_term_init(void)
 	if ((term_name = getenv("TERM")))
 		ret = tgetent(NULL, term_name);
 	else
-		ret = tgetent(NULL, "xterm-256color");
+		return (-1);
 	if (!isatty(STDIN_FILENO))
 	{
 		ft_putendl_fd("Not a terminal.", STDERR_FILENO);
@@ -67,6 +67,13 @@ int			ft_term_init(void)
 				term_name);
 		return (-1);
 	}
+	return (0);
+}
+
+int			ft_term_init(void)
+{
+	if (handle_error() < 0)
+		return (-1);
 	ft_init_termios();
 	ft_dprintf(0, "\033[?1049h\033[H");
 	ft_getttyfd();
