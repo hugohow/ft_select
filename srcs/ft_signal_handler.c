@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:30:35 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/27 19:07:45 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 20:01:09 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,26 @@ static void	sigwinch_handler(void)
 
 static void	sigtstp_handler(void)
 {
-	// int i;
+	int i;
 
+	ft_putstr_fd("term exit", 0);
+	i = 0;
+	while (i < 32)
+	{
+		if (i != SIGCONT)
+			signal(i, SIG_DFL);
+		i++;
+	}
+	ft_putstr_fd("ioctl", 0);
 	ft_term_exit();
-	signal(SIGTSTP, SIG_DFL);
-	if ((ioctl(STDERR_FILENO, TIOCSTI, "\x1A")) < 0)
+	if ((ioctl(0, TIOCSTI, "\x1A")) < 0)
 	{
 		ft_free_global();
+		ft_dprintf(0, "toto\n");
 		signals_disable();
 		exit(1);
 	}
-	// i = 0;
-	// while (i < 32)
-	// {
-	// 	if (i != SIGCONT)
-	// 		signal(i, SIG_IGN);
-	// 	i++;
-	// }
+	ft_putstr_fd("end", 0);
 }
 
 static void	sigcont_handler(void)
@@ -59,15 +62,16 @@ static void	sigcont_handler(void)
 	ft_refresh_screen();
 }
 
-void		signal_handler(int signal)
+void		signal_handler(int signal_id)
 {
-	if (signal == SIGINT || signal == SIGABRT || signal == SIGSTOP || \
-		signal == SIGKILL || signal == SIGQUIT)
+	printf("signal_id : %d", signal_id);
+	if (signal_id == SIGINT || signal_id == SIGABRT || signal_id == SIGSTOP || \
+		signal_id == SIGKILL || signal_id == SIGQUIT)
 		sigint_handler();
-	else if (signal == SIGWINCH)
+	else if (signal_id == SIGWINCH)
 		sigwinch_handler();
-	else if (signal == SIGTSTP)
+	else if (signal_id == SIGTSTP)
 		sigtstp_handler();
-	else if (signal == SIGCONT)
+	else if (signal_id == SIGCONT)
 		sigcont_handler();
 }

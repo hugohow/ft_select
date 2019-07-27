@@ -6,7 +6,7 @@
 /*   By: hhow-cho <hhow-cho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 00:57:41 by hhow-cho          #+#    #+#             */
-/*   Updated: 2019/07/27 14:39:51 by hhow-cho         ###   ########.fr       */
+/*   Updated: 2019/07/27 19:53:54 by hhow-cho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void		ft_getttyfd(void)
 
 	p_vars = get_vars();
 	tty = ttyname(0);
+	printf("tty : %s", tty);
 	p_vars->fd = open(tty, O_WRONLY);
 	if (p_vars->fd < 0)
 	{
